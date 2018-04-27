@@ -1,4 +1,4 @@
-package viewmodel;
+package controller;
 
 import java.util.ArrayList;
 

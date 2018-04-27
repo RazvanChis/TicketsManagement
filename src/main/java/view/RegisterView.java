@@ -6,8 +6,8 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 
 import model.User;
-import viewmodel.UserDAOService;
-import viewmodel.UserDAOServiceImplementation;
+import controller.UserDAOService;
+import controller.UserDAOServiceImplementation;
 
 public class RegisterView extends JDialog {
 	private static final long serialVersionUID = 1L;
@@ -124,8 +124,8 @@ public class RegisterView extends JDialog {
 					user.setUsername(getUsername());
 					user.setType(CUSTOMER_TYPE);
 					if (userDAOService.addUser(user)) {
-						AdminMainView mainView = new AdminMainView(parentFrame);
-						mainView.setVisible(true);
+//						AdminMainView mainView = new AdminMainView(parentFrame);
+//						mainView.setVisible(true);
 					} else {
 						JOptionPane.showMessageDialog(RegisterView.this, "Could not register", "Register",
 								JOptionPane.ERROR_MESSAGE);
