@@ -1,6 +1,5 @@
 package util;
 
-import model.Product;
 import model.User;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
@@ -20,7 +19,6 @@ public class DBUtil {
         configuration.configure(new File("D:/Proiecte/FoodDelivery/src/main/resources/hibernate.cfg.xml"));
         configuration.setProperty("hibernate.temp.use_jdbc_metadata_defaults","false");
         configuration.addAnnotatedClass(User.class);
-        configuration.addAnnotatedClass(Product.class);
         Properties properties = configuration.getProperties();
 
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(properties).build();
