@@ -31,7 +31,7 @@ public class Spectacol {
 	private String dataPremierei;
 	
 	@Column(name = "nr_bilete", nullable = true)
-	private String nrBilete;
+	private int nrBilete;
 
 	public int getSpectacolId() {
 		return spectacolId;
@@ -81,11 +81,11 @@ public class Spectacol {
 		this.dataPremierei = dataPremierei;
 	}
 
-	public String getNrBilete() {
+	public int getNrBilete() {
 		return nrBilete;
 	}
 
-	public void setNrBilete(String nrBilete) {
+	public void setNrBilete(int nrBilete) {
 		this.nrBilete = nrBilete;
 	}
 
