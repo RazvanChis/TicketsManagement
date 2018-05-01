@@ -61,17 +61,16 @@ public class LoginView extends JDialog {
 				UserDAOService userDAOService = new UserDAOServiceImplementation();
 				User user = userDAOService.getUser(getUsername(), getPassword());
 				if (user != null) {
-//					if (user.getType().equals("Customer")) {
-//						CustomerMainView customerMainView = new CustomerMainView(parentFrame);
-//						customerMainView.setVisible(true);
-//						dispose();
-//					} else {
-//						AdminMainView adminMainView = new AdminMainView(parentFrame);
-//						adminMainView.setVisible(true);
-//						dispose();
-				//	}
-					JOptionPane.showMessageDialog(LoginView.this, "Login Success", "Login",
-							JOptionPane.PLAIN_MESSAGE);
+					if (user.getType().equals("Customer")) {
+						// CustomerMainView customerMainView = new
+						// CustomerMainView(parentFrame);
+						// customerMainView.setVisible(true);
+						// dispose();
+					} else {
+						AdminMainView adminMainView = new AdminMainView(parentFrame);
+						adminMainView.setVisible(true);
+						dispose();
+					}
 				} else {
 					JOptionPane.showMessageDialog(LoginView.this, "Invalid username or password", "Login",
 							JOptionPane.ERROR_MESSAGE);

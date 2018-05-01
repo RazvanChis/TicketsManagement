@@ -16,7 +16,7 @@ public class AdminMainView extends JDialog {
 	private static final long serialVersionUID = 1L;
 
 	private JButton usersButton;
-	private JButton productsButton;
+	private JButton showsButton;
 
 	public AdminMainView(Frame parentFrame) {
 		super(parentFrame, "Admin Main View", true);
@@ -31,24 +31,24 @@ public class AdminMainView extends JDialog {
 		constraints.gridwidth = 1;
 		mainPanel.add(usersButton, constraints);
 
-		productsButton = new JButton("Products");
+		showsButton = new JButton("Products");
 		constraints.gridx = 0;
 		constraints.gridy = 1;
 		constraints.gridwidth = 1;
-		mainPanel.add(productsButton, constraints);
+		mainPanel.add(showsButton, constraints);
 
-//		usersButton.addActionListener(new ActionListener() {
-//
-//			@Override
-//			public void actionPerformed(ActionEvent arg0) {
-//				UsersView usersView = new UsersView(parentFrame);
-//				usersView.setVisible(true);
-//			}
-//
-//		});
-//		
-//		productsButton.addActionListener(new ActionListener(){
-//
+		usersButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				UsersView usersView = new UsersView(parentFrame);
+				usersView.setVisible(true);
+			}
+
+		});
+		
+		//showsButton.addActionListener(new ActionListener(){
+
 //			@Override
 //			public void actionPerformed(ActionEvent e) {
 //				ProductsView productsView= new ProductsView(parentFrame);

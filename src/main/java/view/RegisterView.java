@@ -124,8 +124,8 @@ public class RegisterView extends JDialog {
 					user.setUsername(getUsername());
 					user.setType(CUSTOMER_TYPE);
 					if (userDAOService.addUser(user)) {
-//						AdminMainView mainView = new AdminMainView(parentFrame);
-//						mainView.setVisible(true);
+						AdminMainView mainView = new AdminMainView(parentFrame);
+						mainView.setVisible(true);
 					} else {
 						JOptionPane.showMessageDialog(RegisterView.this, "Could not register", "Register",
 								JOptionPane.ERROR_MESSAGE);
