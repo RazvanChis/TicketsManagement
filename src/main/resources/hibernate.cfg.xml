@@ -18,6 +18,7 @@
 		<property name="hibernate.format_sql">true</property>
 		
 		<mapping class ="model.User"/>
+		<mapping class ="model.Spectacol"/>
 		
 	</session-factory>
 </hibernate-configuration>
